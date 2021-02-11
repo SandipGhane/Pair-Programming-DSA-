@@ -31,11 +31,29 @@ void arraySort(int arr[],int size){
         count2--;
     }
 }
+void arraySortOptimul(int arr[],int size){
+    int low=0,high=size-1, arrayIndex=0;
+    while(arrayIndex<=high){
+        switch(arr[arrayIndex]){
+            case 0:
+                swap(arr[low++],arr[arrayIndex++]);
+                break;
+            case 1:
+                // swap()
+                arrayIndex++;
+                break;
+            case 2:
+                swap(arr[arrayIndex],arr[high--]);
+                break;
+        }
+    }
+}
 
 int main(){
     int arr[9]={1,0,1,2,0,1,2,0,0};
     int size = sizeof(arr)/sizeof(arr[0]);
-    arraySort(arr,size);
+    // arraySort(arr,size);
+    arraySortOptimul(arr,size);
     cout<<"After sort"<<endl;
     for(int i=0;i<size;i++){
         cout<<arr[i]<<endl;
