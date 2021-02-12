@@ -14,6 +14,8 @@ void findMissingAndRepeated(int inpArr[], int size)
     {
         countArr[inpArr[i]]++;
     }
+    // countArr
+    // t
     for (int i = 0; i < size; i++)
     {
         if (countArr[i] > 1)
@@ -31,7 +33,7 @@ void findMissingAndRepeated(int inpArr[], int size)
 
 int main()
 {
-    int inputArr[] = {0, 1, 5, 4, 3, 1};
+    int inputArr[] = {0, 1, 5, 1, 3, 1};
     int size = sizeof(inputArr) / sizeof(inputArr[0]);
     findMissingAndRepeated(inputArr, size);
 }
