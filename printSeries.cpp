@@ -7,16 +7,16 @@
 using namespace std;
 void printSeries(int n)
 {
-    if (n < 1)
+    if (n > 4)
     {
         return;
     }
     cout << n;
-    printSeries(n - 1);
+    printSeries(n + 1);
     cout << n;
 }
 int main()
 {
-    int n = 4;
+    int n = 1;
     printSeries(n);
 }
